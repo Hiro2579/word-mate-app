@@ -42,7 +42,7 @@ const Wordbook = () => {
     const checkSession = async () => {
       const { data } = await supabase.auth.getSession()
       if (!data.session) {
-        router.push('/')
+        router.push('/login')
       }
     }
     checkSession()
